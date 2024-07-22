@@ -1,0 +1,17 @@
+1- A container for storing data values / to reuse that values then in the program
+2- A container for storing read-only data values / to prevent the modification of the value
+3- Place in the memory where the information is stored
+4- The name of the variable
+5- The location of the cell in the memory
+6- Hexadecimal
+7- Numbers(Integers or float) , String , Boolean
+8- Integers (10) or Floats (4.2)
+9- One letter or group of letters ("Youssef")
+10- True or false statement
+11- No , The size differs from one type to another
+12- You use much more memory storage than needed which affects the performance
+13- Yes
+14- No, as it is a container for read-only values
+15- make it constant
+16- In the RAM
+17- Integers are the whole numbers but floats are the decimal numbers
