@@ -1,0 +1,8 @@
+Write a program to calculate rectangle area and print it on the screen.
+Area = length * width
+
+ Example Inputs:
+ 10 length
+ 20 width
+ Outputs
+ 200
