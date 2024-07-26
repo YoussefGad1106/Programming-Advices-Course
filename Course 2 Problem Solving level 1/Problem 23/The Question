@@ -1,0 +1,19 @@
+ Write a program to calculate  circle area circle described around an arbitrary triangle, 
+then print it on the screen.
+ The use should enter:
+ a
+ b
+ C
+ Example Inputs:
+ 5
+ 6
+ 7
+ Outputs 
+ 40.088
+
+p = (a+b+c)/2
+
+Area = 3.14 * ( (a*b*c) / (4*sqrt(p*(p-a)*(p-b)*(p-c) ) ) * (a*b*c) / (4*sqrt(p*(p-a)*(p-b)*(p-c) ) ) )
+
+
+NoTe --> بدل ما تعمل الحسبة مرتين ضرب بعض خزن واحدة ف فاريبل واعمله اسكوير
