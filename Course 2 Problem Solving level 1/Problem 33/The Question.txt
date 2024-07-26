@@ -1,0 +1,13 @@
+Write a program to ask the user to enter:
+ • Grade
+ Then print the grade as follows:
+ • 90 –100 Print A
+ • 80 –89   Print B
+ • 70 –79   Print C
+ • 60 –69   Print D
+ • 50 –59   Print E
+ • Otherwise Print F
+ Example Inputs:
+ 95
+ Outputs
+ A
