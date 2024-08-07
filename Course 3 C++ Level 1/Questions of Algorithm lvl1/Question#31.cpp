@@ -9,9 +9,9 @@ int main()
     cout << "Enter the Number : ";
     cin >> Number;
 
-    cout << (Number * Number ) << endl;
-    cout << (Number * Number * Number) << endl;
-    cout << (Number * Number * Number * Number) << endl;
+    cout << pow(Number , 2 ) << endl;
+    cout << pow(Number , 3 ) << endl;
+    cout << pow(Number , 4 ) << endl;
 
 
 }
