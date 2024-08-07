@@ -9,7 +9,7 @@ int main()
     cout << "Enter the Circumference value : ";
     cin >> Circumference;
 
-    cout << ((Circumference * Circumference) / (4*3.14)) << endl;
+    cout << (pow(Circumference , 2) / (4*3.14)) << endl;
 
 
 }
