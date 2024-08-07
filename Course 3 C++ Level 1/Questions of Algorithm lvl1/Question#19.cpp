@@ -9,7 +9,7 @@ int main()
     cout << "Enter the diameter length : ";
     cin >> Diameter;
       
-    cout << ((3.14/4) * (Diameter * Diameter)) << endl;
+    cout << ((3.14/4) * pow(Diameter , 2)) << endl;
 
 
 }
