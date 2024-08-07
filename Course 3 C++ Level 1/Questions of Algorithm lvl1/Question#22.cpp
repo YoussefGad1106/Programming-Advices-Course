@@ -12,7 +12,7 @@ int main()
     cout << "Enter the Base length : ";
     cin >> Base;
 
-    cout << ((3.14 / 4) * (Base * Base)) * ((2 * equalSide) - Base) / ((2 * equalSide) + Base) << endl;
+    cout << ((3.14 / 4) * pow(Base , 2) ) * ((2 * equalSide) - Base) / ((2 * equalSide) + Base) << endl;
 
 
 }
