@@ -9,7 +9,7 @@ int main()
     cout << "Enter the Side length : ";
     cin >> Side;
 
-    cout << ((3.14 / 4) * (Side * Side)) << endl;
+    cout << ((3.14 / 4) * pow(Side , 2)) << endl;
 
 
 }
