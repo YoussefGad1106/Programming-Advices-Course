@@ -2,18 +2,20 @@
 #include<cmath>
 using namespace std;
 
+float rectangleArea(short sideArea, short diagonal)
+{
+	return sideArea * sqrt(pow(diagonal, 2) - pow(sideArea, 2));
+}
+
 int main()
 {
-	short side, diagonal;
+	short sideArea, diagonal;
 
-	cout << "Please enter the side length : ";
-	cin >> side;
-	
+	cout << "Please enter the side area length : ";
+	cin >> sideArea;
+
 	cout << "Please enter the diagonal length : ";
 	cin >> diagonal;
 
-	cout << "The Area = " << side *  sqrt(pow(diagonal, 2) - pow(side, 2)) << endl;
-
-
-
+	cout << "The area of the Rectangle is " << rectangleArea(sideArea, diagonal) << endl;
 }
