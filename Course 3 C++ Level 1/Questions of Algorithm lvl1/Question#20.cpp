@@ -2,14 +2,18 @@
 using namespace std;
 
 
+float circleArea(short Side)
+{   
+    return ((3.14 / 4) * pow(Side, 2));
+}
+
 int main()
 {
-    int Side;
+    short Side;
 
     cout << "Enter the Side length : ";
     cin >> Side;
 
-    cout << ((3.14 / 4) * pow(Side , 2)) << endl;
 
-
+    cout << "The area of the Circle is : " << circleArea(Side) << endl;
 }
