@@ -2,16 +2,20 @@
 using namespace std;
 
 
+void powNumber(short Number)
+{
+    cout << "The Number " << Number << " ^ 2 = " << pow(Number, 2) << endl;
+    cout << "The Number " << Number << " ^ 3 = " << pow(Number, 3) << endl;
+    cout << "The Number " << Number << " ^ 4 = " << pow(Number, 4) << endl;
+
+}
+
 int main()
 {
-    int Number;
+    short Number;
 
     cout << "Enter the Number : ";
     cin >> Number;
 
-    cout << pow(Number , 2 ) << endl;
-    cout << pow(Number , 3 ) << endl;
-    cout << pow(Number , 4 ) << endl;
-
-
+    powNumber(Number);
 }
