@@ -2,14 +2,11 @@
 using namespace std;
 
 
-int main()
+void Converter(int numberOfSeconds)
 {
-    int numberOfSeconds , Days , Hours , Minutes ;
+    short Days, Hours, Minutes;
 
-    cout << "Enter the total number of seconds : ";
-    cin >> numberOfSeconds;
-
-    Days = numberOfSeconds / 24 / 3600 ;
+    Days = numberOfSeconds / 24 / 3600;
 
     numberOfSeconds -= Days * 24 * 3600;
 
@@ -23,8 +20,14 @@ int main()
 
     cout << Days << ":" << Hours << ":" << Minutes << ":" << numberOfSeconds << endl;
 
+}
 
+int main()
+{
+    int numberOfSeconds;
 
-    
+    cout << "Enter the total number of seconds : ";
+    cin >> numberOfSeconds;
 
+    Converter(numberOfSeconds);
 }
