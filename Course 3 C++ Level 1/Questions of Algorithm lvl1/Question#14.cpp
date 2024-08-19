@@ -1,29 +1,30 @@
 #include <iostream>
 using namespace std;
 
+void swap(int &A, int &B)
+{
+    int temp;
+
+    temp = A;
+    A = B;
+    B = temp;
+
+}
 
 int main()
 {
-    int Number1, Number2, Temp;
+    int A, B;
 
-    cout << "Enter the First Number : ";
-    cin >> Number1;
+    cout << "Please Enter the A : \n";
+    cin >> A;
 
-    cout << "Enter the Second Number : ";
-    cin >> Number2;
+    cout << "Please Enter the B : \n";
+    cin >> B;
 
-    cout << Number1 << endl;
-    cout << Number2 << endl;
+    cout << "Before Swap A = " << A << " and B = " << B << endl;
 
-    cout << endl;
+    swap(A, B);
 
-    Temp = Number1;
-    Number1 = Number2;
-    Number2 = Temp;
-
-    cout << Number1 << endl;
-    cout << Number2 << endl;
-
-    
+    cout << "After Swap A = " << A << " and B = " << B << endl;
 
 }
