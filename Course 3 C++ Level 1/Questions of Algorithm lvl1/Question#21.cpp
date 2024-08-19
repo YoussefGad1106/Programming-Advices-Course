@@ -2,14 +2,17 @@
 using namespace std;
 
 
+float circleArea(float Circumference)
+{
+    return (pow(Circumference, 2) / (4 * 3.14));
+}
+
 int main()
 {
-    int Circumference;
+    float Circumference;
 
     cout << "Enter the Circumference value : ";
     cin >> Circumference;
 
-    cout << (pow(Circumference , 2) / (4*3.14)) << endl;
-
-
+    cout << "The area of the Circle is : " << circleArea(Circumference) << endl;
 }
