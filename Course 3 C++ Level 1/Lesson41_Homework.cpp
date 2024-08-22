@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 struct strPersonInfo
 {
 	string FirstName, LastName, Phone;
@@ -32,22 +34,35 @@ void PrintOnePerson(strPersonInfo Person)
 	cout << "\n******************************************\n";
 }
 
-void ReadAllPersons(strPersonInfo Persons[2])
+void ReadAllPersons(strPersonInfo Persons[100], int& length)
 {
-	ReadOnePerson(Persons[0]);
-	ReadOnePerson(Persons[1]);
+	
+
+	cout << "How many persons you will enter : " << endl;
+	cin >> length;
+	
+	for (int i = 0; i < length; i++)
+	{
+		cout << "Enter Person no." << i + 1 << " info" << endl;
+		ReadOnePerson(Persons[i]);
+	}
 }
 
-void PrintAllPersons(strPersonInfo Persons[2])
+void PrintAllPersons(strPersonInfo Persons[100], int length)
 {
-	PrintOnePerson(Persons[0]);
-	PrintOnePerson(Persons[1]);
+	for (int i = 0; i < length; i++)
+	{
+		PrintOnePerson(Persons[i]);
+	}
 }
 
 int main()
 {
-	strPersonInfo Persons[2];
+	
+	strPersonInfo Persons[100];
 
-	ReadAllPersons(Persons);
-	PrintAllPersons(Persons);
+	int length;
+
+	ReadAllPersons(Persons , length);
+	PrintAllPersons(Persons , length);
 }
