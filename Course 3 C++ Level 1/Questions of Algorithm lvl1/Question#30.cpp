@@ -6,8 +6,12 @@ int ReadNumber()
 {
 	int Number;
 
-	cout << "Please Enter a Number  : " << endl;
-	cin >> Number;
+	do
+	{
+		cout << "Please Enter a Positive Number  : " << endl;
+		cin >> Number;
+
+	} while (Number <= 0);
 
 	return Number;
 }
@@ -26,5 +30,5 @@ int PrintFactorial(int N)
 
 int main()
 {
-	cout << "The sum of the even numbers is " << PrintFactorial(ReadNumber()) << endl;
+	cout << "The Factorial is  " << PrintFactorial(ReadNumber()) << endl;
 }
