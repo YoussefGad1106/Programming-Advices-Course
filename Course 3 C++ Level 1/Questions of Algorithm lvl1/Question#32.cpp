@@ -1,21 +1,35 @@
 #include <iostream>
-#include <cmath>
 using namespace std;
 
-void powNumber(short Number , short Power)
+
+int ReadNumber()
 {
-	cout << pow(Number, Power);
+	int Number;
+
+	cout << "Please Enter a Number  : " << endl;
+	cin >> Number;
+
+	return Number;
+}
+
+
+int PrintMultiply(int N)
+{
+	int Power;
+	int result = 1;
+
+	cout << "Please Enter the Power  : " << endl;
+	cin >> Power;
+
+	for (int i = 1 ; i <= Power; i++)
+	{
+		result *= N;
+	}
+
+	return result;
 }
 
 int main()
 {
-	short Number, Power;
-
-	cout << "Enter the Number : ";
-	cin >> Number;
-
-	cout << "Enter the Power : ";
-	cin >> Power;
-
-	powNumber(Number , Power);
+	cout << "The Result is " << PrintMultiply(ReadNumber()) << endl;
 }
