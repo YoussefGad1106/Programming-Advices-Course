@@ -1,7 +1,16 @@
 #include <iostream>
 using namespace std;
 
-void swap(int &A, int &B)
+void ReadNumbers(int& A, int& B)
+{
+    cout << "Please Enter the A : \n";
+    cin >> A;
+
+    cout << "Please Enter the B : \n";
+    cin >> B;
+}
+
+void swap(int& A, int& B)
 {
     int temp;
 
@@ -11,20 +20,24 @@ void swap(int &A, int &B)
 
 }
 
+void PrintBeforeSwap(int A, int B)
+{
+    cout << "\nBefore Swap A = " << A << " and B = " << B << endl;
+}
+
+void PrintAfterSwap(int A, int B)
+{
+    swap(A, B);
+    cout << "\nAfter Swap A = " << A << " and B = " << B << endl;
+
+}
+
 int main()
 {
     int A, B;
 
-    cout << "Please Enter the A : \n";
-    cin >> A;
-
-    cout << "Please Enter the B : \n";
-    cin >> B;
-
-    cout << "Before Swap A = " << A << " and B = " << B << endl;
-
-    swap(A, B);
-
-    cout << "After Swap A = " << A << " and B = " << B << endl;
-
+    ReadNumbers(A, B);
+    PrintBeforeSwap(A, B);
+    PrintAfterSwap(A, B);
 }
+    
