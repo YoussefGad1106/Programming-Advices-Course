@@ -20,7 +20,7 @@ void ReadMrks(strMarks &Marks)
 
 float CalculateAverage(strMarks Marks) 
 {
-	return (Marks.Mark1 + Marks.Mark2 + Marks.Mark3) / 3;
+	return (Marks.Mark1 + Marks.Mark2 + Marks.Mark3) / 3.0;
 }
 
 void PrintResult(float Avg)
