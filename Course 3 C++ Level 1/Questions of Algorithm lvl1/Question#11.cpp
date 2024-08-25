@@ -41,6 +41,5 @@ int main()
 {
 	strMarks Marks;
 
-	ReadMrks(Marks);
-	PrintResult(CalculateAverage(Marks));
+	PrintResult(CalculateAverage(ReadMrks(Marks)));
 }
