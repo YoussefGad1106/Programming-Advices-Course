@@ -1,21 +1,32 @@
-#include<iostream>
-#include<cmath>
+#include <iostream>
+#include <string>
 using namespace std;
 
-float rectangleArea(short sideArea, short diagonal)
+void ReadDimensions(float& Side, float& Diagonal)
 {
-	return sideArea * sqrt(pow(diagonal, 2) - pow(sideArea, 2));
+	cout << "Please enter the side area length : ";
+	cin >> Side;
+
+	cout << "Please enter the diagonal length : ";
+	cin >> Diagonal;
 }
+
+float CalculateRectangleArea(float Side, float Diagonal)
+{
+	return Side * sqrt(pow(Diagonal, 2) - pow(Side, 2));
+}
+
+void PrintArea(float Area)
+{
+	cout << "\nThe Area of the Rectangle is : " << Area << endl;
+}
+
 
 int main()
 {
-	short sideArea, diagonal;
+	float Side, Diagonal;
+	
+	ReadDimensions(Side, Diagonal);
+	PrintArea(CalculateRectangleArea(Side, Diagonal));
 
-	cout << "Please enter the side area length : ";
-	cin >> sideArea;
-
-	cout << "Please enter the diagonal length : ";
-	cin >> diagonal;
-
-	cout << "The area of the Rectangle is " << rectangleArea(sideArea, diagonal) << endl;
 }
