@@ -2,22 +2,31 @@
 #include <string>
 using namespace std;
 
-float rectangleArea(float Length , float Width)
+void ReadDimensions(float& Length, float& Width)
+{
+	cout << "Enter the Length value : " << endl;
+	cin >> Length;
+
+	cout << "Enter the Width value : " << endl;
+	cin >> Width;
+}
+
+float CalculateRectangleArea(float Length, float Width)
 {
 	return Length * Width;
+}
+
+void PrintArea(float Area)
+{
+	cout << "\nThe Area of the Rectangle is : " << Area << endl;
 }
 
 
 int main()
 {
 	float Length, Width;
-
-	cout << "Enter the Length value : " << endl;
-	cin >> Length;
-
-	cout << "Enter the Width value : " << endl;
-	cin >> Width;
-
-	cout << "The Area of the Rectangle is : " << rectangleArea(Length , Width) << endl;
+	
+	ReadDimensions(Length, Width);
+	PrintArea(CalculateRectangleArea(Length, Width));
 
 }
