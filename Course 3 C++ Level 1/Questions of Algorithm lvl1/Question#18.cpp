@@ -2,18 +2,27 @@
 #include <cmath>
 using namespace std;
 
-float circleArea(float radius)
+void ReadRadius(float& Radius)
+{
+	cout << "Enter the radius length : ";
+	cin >> Radius;
+}
+
+float CircleArea(float radius)
 {
 	return 3.14 * pow(radius, 2);
+}
+
+void PrintArea(float Area)
+{
+	cout << "\nThe Area of the Circle is : " << Area << endl;
 }
 
 int main()
 {
 	float radius;
 
-	cout << "Enter the radius length : ";
-	cin >> radius;
-
-	cout << "The area of the Circle is : " << circleArea(radius) << endl;
+	ReadRadius(radius);
+	PrintArea(CircleArea(radius));
 }
-	
+
