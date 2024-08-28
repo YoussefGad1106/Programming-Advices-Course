@@ -3,35 +3,40 @@
 using namespace std;
 
 
-float ReadGrade()
+float ReadGradeInRange(int from , int to)
 {
-	float Grade;
+	float Grade = 0;
+	
+	do
+	{
+		cout << "Please Enter your Grade from 0 to 100 : \n";
+		cin >> Grade;
 
-	cout << "Please Enter your Grade : \n";
-	cin >> Grade;
+	} while (Grade <= from || Grade >= to);
+	
 
 	return Grade;
 }
 
 void CheckGrade(float Grade)
 {
-	if (Grade >= 90 && Grade <= 100)
+	if (Grade >= 90)
 	{
 		cout << "Your Grade is A" << endl;
 	}
-	else if (Grade >= 80 && Grade <= 89)
+	else if (Grade >= 80)
 	{
 		cout << "Your Grade is B" << endl;
 	}
-	else if (Grade >= 70 && Grade <= 79)
+	else if (Grade >= 70)
 	{
 		cout << "Your Grade is C" << endl;
 	}
-	else if (Grade >= 60 && Grade <= 69)
+	else if (Grade >= 60)
 	{
 		cout << "Your Grade is D" << endl;
 	}
-	else if (Grade >= 50 && Grade <= 59)
+	else if (Grade >= 50)
 	{
 		cout << "Your Grade is E" << endl;
 	}
@@ -43,5 +48,5 @@ void CheckGrade(float Grade)
 
 int main()
 {
-	CheckGrade(ReadGrade());
+	CheckGrade(ReadGradeInRange(0,100));
 }
