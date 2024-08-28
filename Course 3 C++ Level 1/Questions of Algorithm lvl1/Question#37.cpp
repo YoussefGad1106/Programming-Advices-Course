@@ -2,7 +2,7 @@
 using namespace std;
 
 
-int ReadNumbers()
+int ReadNumbersAndSumThem()
 {
 	int sum = 0, Number = 0;
 
@@ -14,11 +14,11 @@ int ReadNumbers()
 		cin >> Number;
 
 	} while (Number != -99);
-	
+
 	return sum;
 }
 
 int main()
 {
-	cout << "The Sum is  " << ReadNumbers() << endl;
+	cout << "The Sum is  " << ReadNumbersAndSumThem() << endl;
 }
