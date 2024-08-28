@@ -1,21 +1,30 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-
-float circleArea(short equalSide ,short Base)
+void ReadDimensions(int& EqualSide, int& Base)
 {
-    return ((3.14 / 4) * pow(Base, 2)) * ((2 * equalSide) - Base) / ((2 * equalSide) + Base);
+	cout << "Enter the equalSide length : ";
+	cin >> EqualSide;
+
+	cout << "Enter the Base length : ";
+	cin >> Base;
+}
+
+float CircleArea(int EqualSide, int Base)
+{
+	return ((3.14 / 4) * pow(Base, 2)) * ((2 * EqualSide) - Base) / ((2 * EqualSide) + Base);
+}
+
+void PrintArea(float Area)
+{
+	cout << "\nThe Area of the Circle is : " << Area << endl;
 }
 
 int main()
 {
-    short equalSide, Base;
+	int EqualSide, Base;
 
-    cout << "Enter the equalSide length : ";
-    cin >> equalSide;
-
-    cout << "Enter the Base length : ";
-    cin >> Base;
-
-    cout << "The area of the Circle is : " << circleArea(equalSide , Base) << endl;
+	ReadDimensions(EqualSide, Base);
+	PrintArea(CircleArea(EqualSide,Base));
 }
