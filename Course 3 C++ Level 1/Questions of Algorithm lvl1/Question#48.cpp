@@ -1,19 +1,22 @@
 #include <iostream>
 using namespace std;
 
+int ReadPositiveNumber(string Message)
+{
+    int Number;
+
+    cout << Message << endl;
+    cin >> Number;
+    
+    return Number;
+}
+
 
 int main()
 {
-    short LoanAmount, howManyMonths;
+    int LoanAmount = ReadPositiveNumber("Please enter the loan amount : ");
+    int howManyMonths = ReadPositiveNumber("please enter the monthly payment : ");
 
-    cout << " Please enter the loan amount : ";
-    cin >> LoanAmount;
-
-    cout << " please enter how many months you need to settle the loan : ";
-    cin >> howManyMonths;
-
-    cout << LoanAmount / howManyMonths << endl;
-
-
+    cout << float(LoanAmount / howManyMonths) << endl;
 
 }
