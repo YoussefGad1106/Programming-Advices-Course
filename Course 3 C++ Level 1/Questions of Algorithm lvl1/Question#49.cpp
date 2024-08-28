@@ -19,10 +19,12 @@ void CheckPIN(string PIN)
 
 	if (PIN._Equal(PINCode))
 	{
+		system("color 2f");
 		cout << "Your Balance is: 7500\n";
 	}
 	else
 	{
+		system("color 4f");
 		cout << "Wrong PIN\n";
 	}
 }
