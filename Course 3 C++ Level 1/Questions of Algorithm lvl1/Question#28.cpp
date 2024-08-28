@@ -1,3 +1,4 @@
+
 #include <iostream>
 using namespace std;
 
@@ -12,7 +13,7 @@ int ReadNumber()
 	return Number;
 }
 
-int PrintSum(int N)
+int GetOddSum(int N)
 {
 	int sum = 0;
 
@@ -27,7 +28,12 @@ int PrintSum(int N)
 	return sum;
 }
 
+void PrintSum(int sum)
+{
+	cout << "The sum of the odd numbers is " << sum << endl;
+}
+
 int main()
 {
-	cout << "The sum of the odd numbers is " << PrintSum(ReadNumber()) << endl;
+	PrintSum(GetOddSum(ReadNumber()));
 }
