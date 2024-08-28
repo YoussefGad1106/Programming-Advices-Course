@@ -1,10 +1,11 @@
+
 #include <iostream>
 using namespace std;
 
 
 int ReadNumber()
 {
-	int Number;
+	int Number = 0;
 
 	do
 	{
@@ -16,19 +17,25 @@ int ReadNumber()
 	return Number;
 }
 
-int PrintFactorial(int N)
+int GetFactorial(int N)
 {
-	int fact = 1;
-
-	for (int i = 1; i <= N; i++)
+	if (N == 1 )
 	{
-		fact *= i;
+		return 1;
+	}
+	else
+	{
+		return N *= GetFactorial(N - 1);
 	}
 
-	return fact;
+}
+
+void PrintFactorial(int F)
+{
+	cout << "The Factorial is " << F << endl;
 }
 
 int main()
 {
-	cout << "The Factorial is  " << PrintFactorial(ReadNumber()) << endl;
+	PrintFactorial(GetFactorial(ReadNumber()));
 }
