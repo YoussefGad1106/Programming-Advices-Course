@@ -25,23 +25,18 @@ float Calculator(Inputs in)
 	{
 	case '+' :
 		return in.Number1 + in.Number2;
-		break;
-
+		
 	case '-':
 		return in.Number1 - in.Number2;
-		break;
 
 	case '*':
 		return in.Number1 * in.Number2;
-		break;
 
 	case '/':
 		return in.Number1 / in.Number2;
-		break;
 
 	default:
 		return 0;
-		break;
 	}
 	
 }
