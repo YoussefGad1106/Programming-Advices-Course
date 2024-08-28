@@ -2,19 +2,15 @@
 using namespace std;
 
 
-struct Times
+struct stTimes
 {
     short Days, Hours, Minutes, Seconds;
 };
 
-float taskDuration(Times time)
-{  
-    return (time.Days * 24 * 3600) + (time.Hours * 3600) + (time.Minutes * 60) + time.Seconds ;
-}
-int main()
+stTimes ReadTime()
 {
-    Times time;
-    
+    stTimes time;
+
     cout << "Enter the number of days : ";
     cin >> time.Days;
 
@@ -27,5 +23,14 @@ int main()
     cout << "Enter the number of seconds  : ";
     cin >> time.Seconds;
 
-    cout << "The Task Duration is : " << taskDuration(time) << endl;
+    return time;
+}
+
+float taskDuration(stTimes time)
+{
+    return (float)(time.Days * 24 * 3600) + (time.Hours * 3600) + (time.Minutes * 60) + time.Seconds;
+}
+int main()
+{
+     cout << "The Task Duration is : " << taskDuration(ReadTime()) << endl;
 }
