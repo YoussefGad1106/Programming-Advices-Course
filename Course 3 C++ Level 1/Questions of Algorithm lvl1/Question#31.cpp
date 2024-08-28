@@ -1,8 +1,18 @@
 #include <iostream>
 using namespace std;
 
+int ReadNumber()
+{
+    int Number;
 
-void powNumber(short Number)
+    cout << "Enter the Number : ";
+    cin >> Number;
+
+    return Number;
+}
+
+
+void PowNumber(int Number)
 {
     cout << "The Number " << Number << " ^ 2 = " << pow(Number, 2) << endl;
     cout << "The Number " << Number << " ^ 3 = " << pow(Number, 3) << endl;
@@ -12,10 +22,5 @@ void powNumber(short Number)
 
 int main()
 {
-    short Number;
-
-    cout << "Enter the Number : ";
-    cin >> Number;
-
-    powNumber(Number);
+    PowNumber(ReadNumber());
 }
