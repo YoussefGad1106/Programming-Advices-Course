@@ -20,13 +20,15 @@ void CheckPIN(string PIN)
 
 	while (PIN != PINCode && Attempts != 0)
 	{
-		cout << "Wrong PIN\n";
+		system("color 4f");
+		cout << "Wrong PIN , You have " << Attempts << "more tries left\n";
 		PIN = ReadPIN();
 		Attempts--;
 	}
 
 	if (PIN == PINCode)
 	{
+		system("color 2f");
 		cout << " Your Balance is: 7500\n";
 	}
 
